@@ -1,3 +1,13 @@
+/*
+ *jquery.particleDrawer
+ *
+ *Copyright 2014, takama okazaki
+ *Licensed under the MIT license.
+ *
+ *Original Script is:
+ *http://jsdo.it/yosukenakada/f7eA
+ */
+
 ;(function($){
   var RATIO = 6,
       COLOR = "rgba(0, 255, 0, 0.5)",
