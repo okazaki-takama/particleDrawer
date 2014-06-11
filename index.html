@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=640">
+<title>Particle Drawer</title>
+<meta name="Description" content="">
+<meta name="Keywords"  content="">
+<link rel="stylesheet" type="text/css" media="screen,print" href="style.css">
+<script src="jquery-1.9.1.min.js"></script>
+<script src="jquery.particleDrawer.js"></script>
+<script src="index.js"></script>
+</head>
+<body>
+<div id="wrapper">
+  <canvas id="canvas1" width="640px" height="320px"></canvas>
+
+  <div id="input"><input type="text" value="Aluco"></div>
+  <div class="sources">
+    <p>Script</p>
+
+    <pre>
+    var canvas = $("#canvas1");
+    var input = $("input");
+
+    canvas.particleDrawer("Aluco");
+
+    input.on("keyup", function(){
+      canvas.particleDrawer(this.value);
+    });
+    </pre>
+  </div>
+
+  <canvas id="canvas2" width="640px" height="320px"></canvas>
+  <div class="sources">
+    <p>Script</p>
+    <pre>
+    $("#canvas2").particleDrawer("js", {
+      ratio: 6,
+      font: "40px 'Times New Roman'",
+      color: "rgba(255, 255, 0, 0.8)",
+      align: "right",
+      baseline: "bottom"
+    });
+    </pre>
+  </div>
+
+  <canvas id="canvas3" width="640px" height="320px"></canvas>
+  <div class="sources">
+    <p>Script</p>
+    <pre>
+    $("#canvas3").particleDrawer({
+      text: "php",
+      ratio: 6,
+      font: "20px 'sans-serif'",
+      color: "#0000ff",
+      align: "left",
+      baseline: "top"
+    });
+    </pre>
+  </div>
+</div>
+</body>
+</html>
