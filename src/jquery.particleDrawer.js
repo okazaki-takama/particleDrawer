@@ -237,6 +237,6 @@
     }
 
     var pd =  new ParticleDrawer(canvas, options);
-    return pd;
+    return this;
   };
 })(jQuery);
