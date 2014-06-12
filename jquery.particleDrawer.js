@@ -71,7 +71,28 @@
       this.ctx.particleManager = new ParticleManager();
       this.canvasColor = [0, 0, 0, 0];
 
-      this.textToParticleText();
+      if(options.webfont) this.webFontLoaded();
+      else this.textToParticleText();
+    },
+
+    webFontLoaded: function(){
+      var cv1 = this.canvas, cv2 = cv1.cloneNode(false);
+      var ctx1 = this.ctx, ctx2 = cv2.getContext("2d");
+      var text = "loaded test of webfont";
+
+      ctx1.font = "30px '"+ this.options.webfont + "', serif";
+      ctx2.font = "30px serif";
+
+      var self = this;
+      var interval_id = setInterval(function(){
+        var tm1 = ctx1.measureText(text);
+        var tm2 = ctx2.measureText(text);
+
+        if(tm1.width != tm2.width){
+          clearInterval(interval_id);
+          self.textToParticleText();
+        }
+      }, 10);
     },
 
     textToParticleText: function(){
@@ -192,6 +213,7 @@
       options.font = arg[1].font ? arg[1].font : FONT;
       options.align = arg[1].align ? arg[1].align : ALIGN;
       options.baseline = arg[1].baseline ? arg[1].baseline : BASELINE;
+      options.webfont = typeof arg[1].webfont==="string" ? arg[1].webfont : false;
 
     }else if(typeof arg[0]==="object"){
       options.text = typeof arg[0].text==="string" ? arg[0].text : "";
@@ -201,6 +223,7 @@
       options.font = arg[0].font ? arg[0].font : FONT;
       options.align = arg[0].align ? arg[0].align : ALIGN;
       options.baseline = arg[0].baseline ? arg[0].baseline : BASELINE;
+      options.webfont = typeof arg[0].webfont==="string" ? arg[0].webfont : false;
 
     }else{
       options.text = typeof arg[0]==="string" ? arg[0] : "";
@@ -210,8 +233,10 @@
       options.font = FONT;
       options.align = ALIGN;
       options.baseline = BASELINE;
+      options.webfont = false;
     }
 
     var pd =  new ParticleDrawer(canvas, options);
+    return pd;
   };
 })(jQuery);

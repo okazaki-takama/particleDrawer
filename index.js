@@ -19,9 +19,15 @@ jQuery(function($){
   $("#canvas3").particleDrawer({
     text: "php",
     ratio: 6,
-    font: "20px 'sans-serif'",
+    font: "20px sans-serif",
     color: "#0000ff",
     align: "left",
     baseline: "top"
+  });
+
+  $("#canvas4").particleDrawer("HTML", {
+    ratio: "5",
+    font: "40px 'Lobster'",
+    webfont: "Lobster"
   });
 });
