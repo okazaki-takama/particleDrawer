@@ -5,7 +5,7 @@
  *Licensed under the MIT license.
  *
  *Original Script is:
- *http://jsdo.it/yosukenakada/f7eA
+ *http://jsdo.it/hide1/fWqL
  */
 
 ;(function($){
