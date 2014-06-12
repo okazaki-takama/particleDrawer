@@ -37,12 +37,34 @@ input, select {
 
 body {
   color:#000;
+  background: #f8f8f8;
 }
 
 #wrapper {
   width: 640px;
   margin: 0 auto;
   overflow: hidden;
+}
+
+h1 {
+  margin: 0 0 60px;
+  padding: 10px 0 10px 10px;
+  border-top: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  border-left: 10px solid #ccc;
+  border-right: 2px solid #ccc;
+  font-family: serif;
+  font-size: 36px;
+}
+
+h2 {
+  padding: 10px 0 10px 10px;
+  border-top: 2px solid #eee;
+  border-bottom: 2px solid #eee;
+  border-left: 10px solid #ddd;
+  border-right: 2px solid #eee;
+  font-family: serif;
+  font-size: 28px;
 }
 
 canvas {
@@ -64,8 +86,10 @@ input {
 }
 
 .sources {
-  margin: 0 0 20px;
+  margin: 0 0 40px;
+  padding: 10px 0 0;
   border: 1px solid #ccc;
+  background: #eee;
 }
 
 .sources p {
