@@ -6,8 +6,9 @@ HTML5のCANVASを使った文字で文字を描くアニメーションを実装
 
 <http://jsdo.it/hide1/fWqL>
 
+[DEMO][]
 
-[DEMO][http://okazaki-takama.github.io/particleDrawer-test/]
+[DEMO]: http://okazaki-takama.github.io/particleDrawer-test/ "DEMO"
 
 
 ブラウザ対応状況
